@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Run Prettier y ESLint before commit
+npm run prettier --check .
+npm run lint
+
