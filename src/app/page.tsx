@@ -19,7 +19,8 @@ export default function Home() {
   // This effect ensures the chat scrolls to the bottom every time a new message is added
   useEffect(() => {
     if (chatContainerRef.current) {
-      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+      chatContainerRef.current.scrollTop =
+        chatContainerRef.current.scrollHeight;
     }
   }, [messages]);
 
@@ -113,9 +114,7 @@ export default function Home() {
 
       {/* Main chat section */}
       <div className="col-span-8 flex flex-col justify-end px-8 overflow-y-hidden">
-        <div 
-        ref={chatContainerRef}
-        className="overflow-y-auto mb-8">
+        <div ref={chatContainerRef} className="overflow-y-auto mb-8">
           {messages &&
             messages.map((message, index) => (
               <div key={index} className="py-6">
