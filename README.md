@@ -4,6 +4,13 @@ Gemini Frontend is an emergency reporting web application built with Next.js, Ty
  
 ## The app is deployed. Follow this link to access it: [GeminiApp](https://gemini-six-roan.vercel.app/), or follow the installation guidelines to set it up locally.
 
+## Chat Functionality
+When users enter emergency information, the app intelligently identifies missing details (such as location) and prompts the user to provide them. For instance, if a user writes, "My cat fell from a tree and got injured" but omits the location, the app will ask for the missing information. The user can then simply reply with the additional detail, like "In the park," without needing to retype the entire message.
+
+This approach ensures a smooth and seamless experience, allowing users to complete their report in a natural, conversational flow, without having to repeat or rewrite previously entered information. It reduces friction and saves time, making the process of providing emergency details faster and more user-friendly.
+
+
+
 ## Installation
 
 To get started with Gemini Frontend, follow these steps to set up the project locally:
