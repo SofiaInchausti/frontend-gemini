@@ -1,6 +1,6 @@
 'use client'; // Ensures this component runs on the client side in a Next.js application.
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useState } from 'react';
 import Loading from './loading';
 import sendRequest from './functions';
@@ -14,6 +14,14 @@ export default function Home() {
   const [messages, setMessages] = useState<
     { user: string; content: null | GeminiResponse }[]
   >([]);
+  const chatContainerRef = useRef<HTMLDivElement | null>(null);
+
+  // This effect ensures the chat scrolls to the bottom every time a new message is added
+  useEffect(() => {
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    }
+  }, [messages]);
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     if (e.target.value.length >= 225) {
@@ -105,7 +113,9 @@ export default function Home() {
 
       {/* Main chat section */}
       <div className="col-span-8 flex flex-col justify-end px-8 overflow-y-hidden">
-        <div className="overflow-y-auto mb-8">
+        <div 
+        ref={chatContainerRef}
+        className="overflow-y-auto mb-8">
           {messages &&
             messages.map((message, index) => (
               <div key={index} className="py-6">

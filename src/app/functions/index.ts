@@ -2,7 +2,7 @@ import GeminiResponse from '../types';
 
 const sendRequest = async (
   datos: object,
-  url = 'http://localhost:5000/gemini',
+  url = 'https://backend-gemini-6vp6.onrender.com/gemini',
 ): Promise<GeminiResponse> => {
   const respuesta = await fetch(url, {
     method: 'POST',
