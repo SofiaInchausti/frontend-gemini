@@ -142,6 +142,7 @@ export default function Home() {
                         Complete:{message.content?.complete ? 'true' : 'false'}
                       </p>
                       <p>Question:{message.content?.question}</p>
+                      {message.content?.message && <p className="font-medium">{message.content?.message}</p>}
                     </div>
                   )}
                 </div>

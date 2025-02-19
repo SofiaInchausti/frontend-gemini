@@ -6,6 +6,7 @@ interface GeminiResponse {
   owner: boolean;
   complete: boolean;
   question: string;
+  message?: string;
 }
 
 export default GeminiResponse;
