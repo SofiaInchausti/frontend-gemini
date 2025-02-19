@@ -163,7 +163,7 @@ export default function Home() {
             value={input}
             id="textArea"
             placeholder="Type your incident"
-            className="border-2 rounded-3xl border-[#452966] overflow-y-auto resize-none whitespace-pre-wrap w-full pl-4 pr-8 content-center"
+            className="placeholder:text-gray-800 border-2 rounded-3xl border-[#452966] overflow-y-auto resize-none whitespace-pre-wrap w-full pl-4 pr-8 content-center"
           ></textarea>
           <div className="absolute right-2 top-[17%] flex items-center">
             <button
