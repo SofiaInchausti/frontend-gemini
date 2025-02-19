@@ -2,7 +2,7 @@
 
 Gemini Frontend is an emergency reporting web application built with Next.js, TypeScript, Vitest for testing, and styled with Tailwind CSS. It allows users to input an emergency description, which is processed to detect important data such as date, location, description, injuries, and owner. If any required data is missing, the application prompts the user to provide the missing information and returns the complete result.
 
-## The app is deployed. Follow this link to access it: [GeminiApp](https://gemini-sofiainchaustis-projects.vercel.app/), or follow the installation guidelines to set it up locally.
+## The app is deployed. Follow this link to access it: [GeminiApp](https://gemini-qzceh2nd1-sofiainchaustis-projects.vercel.app/), or follow the installation guidelines to set it up locally.
 
 ## Chat Functionality
 
